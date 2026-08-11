@@ -135,13 +135,12 @@ def main():
         # Esta función carga los tags de los libros en el catalogo.
         # Puede guiarse de las opciones 1 y 2.
         # Imprima el total de tags de los libros cargados.
+
         elif int(inputs[0]) == 3:
-            print("Cargando información de tags de libros....")
+            print("Cargando informacion de los libros....")
+            booksTags = load_books_tags(app)
+            print("Total de tags de libros cargados: " + str(booksTags) + "\n   ")
 
         elif int(inputs[0]) == 0:
-            working = False
-            print("\nGracias por utilizar el programa.")
-
-        else:
-            print("Opcion erronea, vuelva a elegir.\n")
+            pass            
     sys.exit(0)
