@@ -128,7 +128,7 @@ def main():
         elif int(inputs[0]) == 2:
             print("Cargando información de tags....")
             tags = load_tags(app)
-            print("Total de tags cargados: " + str(tags) + "\n")
+            print("Total de tags cargados: " + str(tags) +  "\n")
 
         # TODO: Mods Lab 1, agregar la funcion opt 3 -> load_book_tags().
         # Agregue la opción 3 que llama a la función load_books_tags() (creada en la lógica).

@@ -148,7 +148,7 @@ def load_books_tags(catalog, filename):
     
     catalog["book_tags"] = set.load_set(book_tags, book_tags_file)
 
-    if empty_book_tags(catalog):
+    if empty_book_tags(catalog) :
         return 0
     else:
         return book_tag_size(catalog)
