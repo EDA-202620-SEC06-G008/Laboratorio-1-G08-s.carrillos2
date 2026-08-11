@@ -26,6 +26,7 @@
  * Andres Rodriguez - Última version
  """
 
+from fileinput import filename
 import os
 
 
@@ -138,9 +139,20 @@ def load_books_tags(catalog, filename):
     # TODO: Mods Lab 1, integrar vista y logica
     # Implemente una función que cargue los tags de los libros en el catalogo.
     # La función debe recibir el catalogo y el nombre del archivo csv con los tags de los libros.
+
     # La función debe cargar los tags de los libros del archivo y los agregar al conjunto book_tags del catalogo.
     # La función debe retornar el tamaño del conjunto de tags de los libros.
-    pass
+    
+    book_tags = catalog["book_tags"]
+    book_tags_file = os.path.join(data_dir, filename)
+    
+    catalog["book_tags"] = set.load_set(book_tags, book_tags_file)
+
+    if empty_book_tags(catalog):
+        return 0
+    else:
+        return book_tag_size(catalog)
+    
 
 # Funciones de consulta
 
